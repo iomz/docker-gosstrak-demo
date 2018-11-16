@@ -1,0 +1,73 @@
+version: '2'
+
+services:
+  gosstrak:
+    image: gosstrak:latest
+    container_name: gosstrak
+    volumes:
+      - ./data/gosstrak:/opt/gosstrak
+    restart: always
+    links:
+      - influxdb:influxdb
+      - golemu:golemu
+    depends_on:
+      - influxdb
+      - golemu
+    environment:
+      - GOLEMU_IP_ADDRESS="10.0.234.3:5084"
+      - INFLUXDB_ENDPOINT="http://10.0.234.4:8086"
+    networks:
+      gosstrak:
+        ipv4_address: 10.0.234.2
+
+  golemu:
+    image: iomz/golemu:latest
+    container_name: golemu
+    volumes:
+      - ./data/golemu:/opt/golemu
+    restart: always
+    ports:
+      - "5084:5084"
+    networks:
+      gosstrak:
+        ipv4_address: 10.0.234.3
+
+  influxdb:
+    image: influxdb:latest
+    container_name: influxdb
+    environment:
+      - INFLUXDB_GRAPHITE_ENABLED=true
+      - INFLUXDB_DATA_ENGINE=tsm1
+      - INFLUXDB_REPORTING_DISABLED=false
+    ports:
+      - "8086:8086"
+    restart: always
+    volumes:
+      - ./data/influxdb:/var/lib/influxdb
+    networks:
+      gosstrak:
+        ipv4_address: 10.0.234.4
+
+  grafana:
+    image: grafana/grafana:latest
+    container_name: grafana
+    ports:
+      - "3000:3000"
+    links:
+      - influxdb
+    volumes:
+      - ./data/grafana:/var/lib/grafana
+    environment:
+      - GF_INSTALL_PLUGINS=grafana-clock-panel,briangann-gauge-panel,natel-plotly-panel,grafana-simple-json-datasource
+    networks:
+      gosstrak:
+        ipv4_address: 10.0.234.5
+
+networks:
+  gosstrak:
+    driver: bridge
+    ipam:
+      driver: default
+      config:
+        - subnet: 10.0.234.0/24
+

@@ -1,0 +1,3 @@
+FROM scratch
+ADD golemu /
+CMD ["/golemu", "simulate", "-i", "5000", "/opt/golemu/dataset"]

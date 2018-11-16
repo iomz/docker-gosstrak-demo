@@ -1,0 +1,7 @@
+FROM scratch
+ADD gosstrak-fc /
+CMD ["/gosstrak-fc", "start", "--enableStat", "-f", "/opt/gosstrak/ecspec.csv"]
+#RUN /gosstrak-fc start --enableStat \
+#    -f /opt/gosstrak/ecspec.csv
+#    -l 10.0.234.3:5084 \
+#    --influxAddr http://10.0.234.4:8086
