@@ -9,6 +9,11 @@
 
 # golemu container
 
+## Build golemu binary
+```sh
+~/go/src/github.com/iomz/golemu % CGO_ENABLED=0 GOOS=linux go build -a -installsuffix cgo -o ~/docker-gosstrak-demo/golemu/golemu .
+```
+
 ## Build golemu docker image
 ```sh
 ~/docker-gosstrak-demo/golemu % docker build -t golemu -f Dockerfile.scratch .
@@ -20,6 +25,11 @@
 ```
 
 # gosstrak container
+
+## Build gosstrak-fc binary
+```sh
+~/go/src/github.com/iomz/gosstrak % CGO_ENABLED=0 GOOS=linux go build -a -installsuffix cgo -o ~/docker-gosstrak-demo/gosstrak/gosstrak-fc ./cmd/gosstrak-fc
+```
 
 ## Build gosstrak docker image
 ```sh
