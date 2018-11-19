@@ -2,7 +2,7 @@ version: '2'
 
 services:
   gosstrak:
-    image: gosstrak:latest
+    image: iomz/gosstrak:latest
     container_name: gosstrak
     volumes:
       - ./data/gosstrak:/opt/gosstrak
