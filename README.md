@@ -6,6 +6,14 @@ This repository contains a docker-compose for creating a working demo sample for
 
 # What does the demo do?
 
+The `docker-compose.yml` will spin up 4 docker containers.
+
+- golemu: Run LLRP emulator with the gob files placed in `data/golemu/dataset`. golemu iterates through each `.gob` file and repeat the cycle endlessly.
+- gosstrak: Run Filtering & Collection middleware to receive the RFID read events from the emulator in LLRP. It filters the tags based on `data/gosstrak/ecspec.csv`. The `ecspec.csv` contains prefix URN of interested ID patterns and its corresponding notification URI. The ID patterns are aggregated with the notification URI; i.e., the first entry is the URI and the rest of the line is the patterns.
+- influxdb: A InfluxDB instance which receives the performance monitoring directly from gosstrak.
+- grafana: Draw realtime plots of gosstrak performance with the InfluxDB instance.
+
+The latest version of [iomz/gosstrak](https://cloud.docker.com/u/iomz/repository/docker/iomz/gosstrak) docker image on Docker Hub is a custom version of gosstrak which dynamically adopts the efficient filtering algorithm depending on the statistics of event traffic.
 
 # How to setup the demo
 
@@ -60,11 +68,13 @@ $GOPAH/src/github.com/iomz/gosstrak % CGO_ENABLED=0 GOOS=linux go build -a -inst
 # Run only a golemu/gosstrak container
 
 ## Run gosstrak container
+
 ```sh
 ~/docker-gosstrak-demo % docker run --name gosstrak --mount type=bind,source=<path_to_project>/docker-gosstrak-demo/data/gosstrak,target=/opt/gosstrak gosstrak:latest
 ```
 
 ## Run golemu container
+
 ```sh
 ~/docker-gosstrak-demo % docker run --name golemu --mount type=bind,source=<path_to_project>/docker-gosstrak-demo/data/golemu,target=/opt/golemu golemu:latest
 ```
