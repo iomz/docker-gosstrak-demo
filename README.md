@@ -4,7 +4,7 @@ This repository contains a docker-compose for creating a working demo sample for
 
 ![Demo on Grafana](https://i.imgur.com/4mgHa5K.gif)
 
-# What does the demo do?
+## What does the demo do?
 
 The `docker-compose.yml` will spin up 4 docker containers.
 
@@ -15,7 +15,7 @@ The `docker-compose.yml` will spin up 4 docker containers.
 
 The latest version of [iomz/gosstrak](https://cloud.docker.com/u/iomz/repository/docker/iomz/gosstrak) docker image on Docker Hub is a custom version of gosstrak which dynamically adopts the efficient filtering algorithm depending on the statistics of event traffic.
 
-# How to setup the demo
+## How to setup the demo
 
 1. [Install Docker](https://docs.docker.com/install/) and [docker-compose](https://docs.docker.com/compose/install/) on your system.
 
@@ -33,11 +33,11 @@ The latest version of [iomz/gosstrak](https://cloud.docker.com/u/iomz/repository
 % docker-compose up
 ```
 
-# The containers
+## The containers
 
 The below assumes this repository is cloned to `~/docker-gosstrak-demo`.
 
-## golemu
+### golemu
 
 Build the single binary golemu from the source and put build the docker image with it.
 
@@ -51,7 +51,7 @@ $GOPATH/src/github.com/iomz/golemu % CGO_ENABLED=0 GOOS=linux go build -a -insta
 ~/docker-gosstrak-demo/golemu % docker build -t golemu -f Dockerfile.scratch .
 ```
 
-## gosstrak
+### gosstrak
 
 Likewise in golemu.
 
@@ -65,16 +65,23 @@ $GOPAH/src/github.com/iomz/gosstrak % CGO_ENABLED=0 GOOS=linux go build -a -inst
 ~/docker-gosstrak-demo/gosstrak % docker build -t gosstrak -f Dockerfile.scratch .
 ```
 
-# Run only a golemu/gosstrak container
+## Run only a golemu/gosstrak container
 
-## Run gosstrak container
+### Run gosstrak container
 
 ```sh
 ~/docker-gosstrak-demo % docker run --name gosstrak --mount type=bind,source=<path_to_project>/docker-gosstrak-demo/data/gosstrak,target=/opt/gosstrak gosstrak:latest
 ```
 
-## Run golemu container
+### Run golemu container
 
 ```sh
 ~/docker-gosstrak-demo % docker run --name golemu --mount type=bind,source=<path_to_project>/docker-gosstrak-demo/data/golemu,target=/opt/golemu golemu:latest
 ```
+## License
+
+MIT
+
+## Author
+
+Iori Mizutani (a.k.a. iomz)
