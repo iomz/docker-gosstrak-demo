@@ -2,7 +2,7 @@
 
 This repository contains a docker-compose for creating a working demo sample for [golemu](https://github.com/iomz/golemu) (LLRP Emulator), [gosstrak-fc](https://github.com/iomz/gosstrak) (Filtering & Collection middleware), and the visualization of LLRP traffic by [Grafana](https://grafana.com/) and [InfluxDB](https://grafana.com).
 
-[Demo on Grafana](https://i.imgur.com/4mgHa5K.gifv)
+![Demo on Grafana](https://i.imgur.com/4mgHa5K.gifv)
 
 # What does the demo do?
 
