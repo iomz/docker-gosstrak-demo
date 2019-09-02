@@ -39,7 +39,7 @@
   dependencies:
     "@babel/types" "7.0.0-beta.51"
     jsesc "^2.5.1"
-    lodash "^4.17.5"
+    lodash "^4.17.13"
     source-map "^0.5.0"
     trim-right "^1.0.1"
 
@@ -90,7 +90,7 @@
     "@babel/code-frame" "7.0.0-beta.51"
     "@babel/parser" "7.0.0-beta.51"
     "@babel/types" "7.0.0-beta.51"
-    lodash "^4.17.5"
+    lodash "^4.17.13"
 
 "@babel/traverse@7.0.0-beta.51":
   version "7.0.0-beta.51"
@@ -105,14 +105,14 @@
     debug "^3.1.0"
     globals "^11.1.0"
     invariant "^2.2.0"
-    lodash "^4.17.5"
+    lodash "^4.17.13"
 
 "@babel/types@7.0.0-beta.51":
   version "7.0.0-beta.51"
   resolved "https://registry.yarnpkg.com/@babel/types/-/types-7.0.0-beta.51.tgz#d802b7b543b5836c778aa691797abf00f3d97ea9"
   dependencies:
     esutils "^2.0.2"
-    lodash "^4.17.5"
+    lodash "^4.17.13"
     to-fast-properties "^2.0.0"
 
 "@choojs/findup@^0.2.0":
@@ -793,7 +793,7 @@ async@^2.1.4:
   version "2.6.1"
   resolved "https://registry.yarnpkg.com/async/-/async-2.6.1.tgz#b245a23ca71930044ec53fa46aa00a3e87c6a610"
   dependencies:
-    lodash "^4.17.10"
+    lodash "^4.17.13"
 
 asynckit@^0.4.0:
   version "0.4.0"
@@ -840,7 +840,7 @@ babel-core@^6.0.0, babel-core@^6.26.0, babel-core@^6.26.3:
     convert-source-map "^1.5.1"
     debug "^2.6.9"
     json5 "^0.5.1"
-    lodash "^4.17.4"
+    lodash "^4.17.13"
     minimatch "^3.0.4"
     path-is-absolute "^1.0.1"
     private "^0.1.8"
@@ -856,7 +856,7 @@ babel-generator@^6.18.0, babel-generator@^6.26.0:
     babel-types "^6.26.0"
     detect-indent "^4.0.0"
     jsesc "^1.3.0"
-    lodash "^4.17.4"
+    lodash "^4.17.13"
     source-map "^0.5.7"
     trim-right "^1.0.1"
 
@@ -884,7 +884,7 @@ babel-helper-define-map@^6.24.1:
     babel-helper-function-name "^6.24.1"
     babel-runtime "^6.26.0"
     babel-types "^6.26.0"
-    lodash "^4.17.4"
+    lodash "^4.17.13"
 
 babel-helper-explode-assignable-expression@^6.24.1:
   version "6.24.1"
@@ -931,7 +931,7 @@ babel-helper-regex@^6.24.1:
   dependencies:
     babel-runtime "^6.26.0"
     babel-types "^6.26.0"
-    lodash "^4.17.4"
+    lodash "^4.17.13"
 
 babel-helper-remap-async-to-generator@^6.24.1:
   version "6.24.1"
@@ -1045,7 +1045,7 @@ babel-plugin-transform-es2015-block-scoping@^6.23.0:
     babel-template "^6.26.0"
     babel-traverse "^6.26.0"
     babel-types "^6.26.0"
-    lodash "^4.17.4"
+    lodash "^4.17.13"
 
 babel-plugin-transform-es2015-classes@^6.23.0:
   version "6.24.1"
@@ -1264,7 +1264,7 @@ babel-register@^6.26.0:
     babel-runtime "^6.26.0"
     core-js "^2.5.0"
     home-or-tmp "^2.0.0"
-    lodash "^4.17.4"
+    lodash "^4.17.13"
     mkdirp "^0.5.1"
     source-map-support "^0.4.15"
 
@@ -1283,7 +1283,7 @@ babel-template@^6.16.0, babel-template@^6.24.1, babel-template@^6.26.0:
     babel-traverse "^6.26.0"
     babel-types "^6.26.0"
     babylon "^6.18.0"
-    lodash "^4.17.4"
+    lodash "^4.17.13"
 
 babel-traverse@^6.0.0, babel-traverse@^6.18.0, babel-traverse@^6.24.1, babel-traverse@^6.26.0:
   version "6.26.0"
@@ -1297,7 +1297,7 @@ babel-traverse@^6.0.0, babel-traverse@^6.18.0, babel-traverse@^6.24.1, babel-tra
     debug "^2.6.8"
     globals "^9.18.0"
     invariant "^2.2.2"
-    lodash "^4.17.4"
+    lodash "^4.17.13"
 
 babel-types@^6.0.0, babel-types@^6.18.0, babel-types@^6.19.0, babel-types@^6.24.1, babel-types@^6.26.0:
   version "6.26.0"
@@ -1305,7 +1305,7 @@ babel-types@^6.0.0, babel-types@^6.18.0, babel-types@^6.19.0, babel-types@^6.24.
   dependencies:
     babel-runtime "^6.26.0"
     esutils "^2.0.2"
-    lodash "^4.17.4"
+    lodash "^4.17.13"
     to-fast-properties "^1.0.3"
 
 babylon@^6.18.0:
@@ -3630,9 +3630,8 @@ growly@^1.3.0:
   version "1.3.0"
   resolved "https://registry.yarnpkg.com/growly/-/growly-1.3.0.tgz#f10748cbe76af964b7c96c93c6bcc28af120c081"
 
-handlebars@^4.0.11:
-  version "4.0.11"
-  resolved "https://registry.yarnpkg.com/handlebars/-/handlebars-4.0.11.tgz#630a35dfe0294bc281edae6ffc5d329fc7982dcc"
+handlebars@^4.0.14:
+  version "4.0.14"
   dependencies:
     async "^1.4.0"
     optimist "^0.6.1"
@@ -3860,7 +3859,7 @@ inquirer@^6.0.0:
     cli-width "^2.0.0"
     external-editor "^3.0.0"
     figures "^2.0.0"
-    lodash "^4.17.10"
+    lodash "^4.17.13"
     mute-stream "0.0.7"
     run-async "^2.2.0"
     rxjs "^6.1.0"
@@ -4224,7 +4223,7 @@ istanbul-reports@^1.4.1:
   version "1.5.0"
   resolved "https://registry.yarnpkg.com/istanbul-reports/-/istanbul-reports-1.5.0.tgz#c6c2867fa65f59eb7dcedb7f845dfc76aaee70f9"
   dependencies:
-    handlebars "^4.0.11"
+    handlebars "^4.0.14"
 
 jest-changed-files@^23.4.2:
   version "23.4.2"
@@ -4725,9 +4724,8 @@ lodash.sortby@^4.7.0:
   version "4.7.0"
   resolved "https://registry.yarnpkg.com/lodash.sortby/-/lodash.sortby-4.7.0.tgz#edd14c824e2cc9c1e0b0a1b42bb5210516a42438"
 
-lodash@^4.13.1, lodash@^4.17.10, lodash@^4.17.4, lodash@^4.17.5:
-  version "4.17.10"
-  resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.10.tgz#1b7793cf7259ea38fb3661d4d38b3260af8ae4e7"
+lodash@^4.17.13:
+  version "4.17.13"
 
 long@4.0.0:
   version "4.0.0"
@@ -4876,9 +4874,8 @@ md5.js@^1.3.4:
     hash-base "^3.0.0"
     inherits "^2.0.1"
 
-mem@^1.1.0:
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/mem/-/mem-1.1.0.tgz#5edd52b485ca1d900fe64895505399a0dfa45f76"
+mem@^4.0.0:
+  version "4.0.0"
   dependencies:
     mimic-fn "^1.0.0"
 
@@ -5512,7 +5509,7 @@ os-locale@^2.0.0:
   dependencies:
     execa "^0.7.0"
     lcid "^1.0.0"
-    mem "^1.1.0"
+    mem "^4.0.0"
 
 os-tmpdir@^1.0.0, os-tmpdir@^1.0.1, os-tmpdir@~1.0.2:
   version "1.0.2"
